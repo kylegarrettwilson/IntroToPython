@@ -36,6 +36,12 @@ a = pizzaCount(free_count, 30)
 print "You get " + str(a) + " free pizza coupons!"
 
 
+toppings = ["olives" , "cheese", "bacon"]
+toppings.append(food_name)
+print "The toppings we have available are ", toppings
+
+
+
 
 
 
