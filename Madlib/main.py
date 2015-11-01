@@ -2,7 +2,7 @@ parlor_name = raw_input("Enter a proper noun (restaurant) ")
 
 food_name = raw_input("Enter a noun (food) ")
 
-tossed_name = raw_input("Enter a verb ")
+action_name = raw_input("Run or jump? ")
 
 toppings_count = raw_input("Enter a number ")
 
@@ -39,6 +39,11 @@ print "You get " + str(a) + " free pizza coupons!"
 toppings = ["olives" , "cheese", "bacon"]
 toppings.append(food_name)
 print "The toppings we have available are ", toppings
+
+
+verb = dict()
+verb = {"run":"jump", "jump":"run"}
+print "We love to " + verb[action_name] + " over your pizza!"
 
 
 
