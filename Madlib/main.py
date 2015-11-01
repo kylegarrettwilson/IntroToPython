@@ -8,7 +8,7 @@ toppings_count = raw_input("Enter a number ")
 
 free_count = int(raw_input("Enter a number "))
 
-customer_count = raw_input("Enter a number ")
+customer_count = int(raw_input("Enter a number "))
 
 
 print "Hello and welcome to ", parlor_name
@@ -44,6 +44,14 @@ print "The toppings we have available are ", toppings
 verb = dict()
 verb = {"run":"jump", "jump":"run"}
 print "We love to " + verb[action_name] + " over your pizza!"
+
+
+
+i = customer_count
+while i<10:
+    print "You are the " + str(i) + " customer of the day!"
+    i = i+1
+
 
 
 
