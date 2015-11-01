@@ -28,12 +28,14 @@ else:
     print "You must be new around here, give us a good tip."
 
 
-def free_count(x):
-    coupon = x / 4
+def pizza_count(x, y):
+    coupon = x - y
     return coupon
 
-a = free_count()
+a = pizza_count(free_count, 4)
 print "You get " + str(a) + " free pizza coupons!"
+
+
 
 
 
