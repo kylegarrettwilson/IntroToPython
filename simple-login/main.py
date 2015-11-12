@@ -17,6 +17,26 @@ class MainHandler(webapp2.RequestHandler):
 <html>
     <head>
     <title>Login!</title>
+
+    <style>
+        body{
+        width: 100%;
+        background-color: grey;
+        }
+        form{
+        width: 200px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 15px;
+        font-size: 2em;
+        border: 2px solid white;
+        background-color: black;
+        color: white;
+
+
+
+    </style>
+
     </head>
     <body>'''
 
@@ -32,10 +52,10 @@ class MainHandler(webapp2.RequestHandler):
             <br>
             <input type="radio" name="gender" value="female">Female
             <br>
-            <select>
-                <option name="eye" value="blue">Blue eyes</option>
-                <option name="eye" value="brown">Brown eyes</option>
-                <option name="eye" value="green">Green eyes</option>
+            <select name="eye">
+                <option value="blue">Blue eyes</option>
+                <option value="brown">Brown eyes</option>
+                <option value="green">Green eyes</option>
             </select>
             <input type="submit" value="Submit" />'''
 
