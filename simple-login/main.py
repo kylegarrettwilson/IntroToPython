@@ -37,7 +37,7 @@ class MainHandler(webapp2.RequestHandler):
                 <option name="eye" value="brown">Brown eyes</option>
                 <option name="eye" value="green">Green eyes</option>
             </select>
-            <input type="submit: value="Submit" />'''
+            <input type="submit" value="Submit" />'''
 
         page_close = '''
         </form>
