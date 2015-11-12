@@ -25,9 +25,13 @@ class MainHandler(webapp2.RequestHandler):
 
 
         page_body = '''<form method="GET">
-            <label>First Name: </label><input type="text" name="first" />
-            <label>Last Name: </label><input type="text" name="last" />
-            <label>Email: </label><input type="text" name="email" />
+            <label>First Name: </label><input type="text" name="first" /><br>
+            <label>Last Name: </label><input type="text" name="last" /><br>
+            <label>Email: </label><input type="text" name="email" /><br>
+            <input type="radio" name="gender" value="male" checked>Male
+            <br>
+            <input type="radio" name="gender" value="female">Female
+
             <input type="submit: value="Submit" />'''
 
         page_close = '''
