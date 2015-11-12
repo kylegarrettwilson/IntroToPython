@@ -31,7 +31,12 @@ class MainHandler(webapp2.RequestHandler):
             <input type="radio" name="gender" value="male" checked>Male
             <br>
             <input type="radio" name="gender" value="female">Female
-
+            <br>
+            <select>
+                <option value="blue">Blue eyes</option>
+                <option value="brown">Brown eyes</option>
+                <option value="green">Green eyes</option>
+            </select>
             <input type="submit: value="Submit" />'''
 
         page_close = '''
