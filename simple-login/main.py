@@ -33,9 +33,9 @@ class MainHandler(webapp2.RequestHandler):
             <input type="radio" name="gender" value="female">Female
             <br>
             <select>
-                <option value="blue">Blue eyes</option>
-                <option value="brown">Brown eyes</option>
-                <option value="green">Green eyes</option>
+                <option name="eye" value="blue">Blue eyes</option>
+                <option name="eye" value="brown">Brown eyes</option>
+                <option name="eye" value="green">Green eyes</option>
             </select>
             <input type="submit: value="Submit" />'''
 
@@ -44,10 +44,12 @@ class MainHandler(webapp2.RequestHandler):
     </body>
 </html>'''
         if self.request.GET:  #if get does exist then print the material
-            first = self.request.GET['first']    #This is storing form info within a variable and then send it out
-            last = self.request.GET['last']       #This is storing form info within a variable and then send it out
-            email = self.request.GET['email']    #This is storing form info within a variable and then send it out
-            self.response.write(page_head + first + ' ' + last + ' ' + email + page_close)
+            first = self.request.GET['first']    #This is storing form info within a variable and then sending it out
+            last = self.request.GET['last']       #This is storing form info within a variable and then sending it out
+            email = self.request.GET['email']    #This is storing form info within a variable and then sending it out
+            check = self.request.GET['gender']   #This is storing form info within a variable and then sending it out
+            select = self.request.GET['eye']     #This is storing form info within a variable and then sending it out
+            self.response.write(page_head + first + ' ' + last + ' ' + email + ' ' + check + ' ' + select + ' ' + page_close)
         else:
             self.response.write(page_head + page_body + page_close)              #this prints info onto the page, this is publish
 
