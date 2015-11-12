@@ -38,7 +38,7 @@ class MainHandler(webapp2.RequestHandler):
             first = self.request.GET['first']    #This is storing form info within a variable and then send it out
             last = self.request.GET['last']       #This is storing form info within a variable and then send it out
             email = self.request.GET['email']    #This is storing form info within a variable and then send it out
-            self.response.write(page_head + user + ' ' + email + page_body + page_close)
+            self.response.write(page_head + first + ' ' + last + ' ' + email + page_close)
         else:
             self.response.write(page_head + page_body + page_close)              #this prints info onto the page, this is publish
 
