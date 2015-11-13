@@ -21,7 +21,16 @@ class FavoriteCars(object):
         return output
 
 
-    def 
+    def calc_time(self):
+        years = []
+        for car in self.__car_list:
+            years.append(car.year)
+
+        years.sort() # sorting the dates high to low
+
+        num = len(years) - 1
+        span = years[num] - years[0] #last year minus the first year
+        return 'The cars you entered span a total of ' + str(span) + ' years.' # now calc_time represents the number created here
 
 
 

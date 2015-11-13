@@ -24,16 +24,17 @@ class MainHandler(webapp2.RequestHandler):  #make this user input using a form
         cd1.type = "mustang"
         cd1.year = 2008
         cd1.manufactor = "ford"
-        lib.addCar(cd1)    #adding to the library
+        lib.add_car(cd1)    #adding to the library
 
         cd2 = CarData()       # second instance
         cd2.type = "batcar"
         cd2.year = 2003
         cd2.manufactor = "batman"
-        lib.addCar(cd2)    #adding to the library
+        lib.add_car(cd2)    #adding to the library
 
 
-        p.body = lib.compileCars()
+        lib.calc_time()
+        p.body = lib.compile_cars()
         self.response.write(p.print_out()) #prints the big string
 
 
