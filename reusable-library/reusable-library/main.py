@@ -7,8 +7,10 @@ Project reusable library
 
 
 import webapp2
+from form_page import FormPage
 from library import CarData, FavoriteCars  #importing both classes
 from result_page import ResultsPage
+
 
 class MainHandler(webapp2.RequestHandler):  #make this user input using a form
     def get(self):
@@ -18,23 +20,27 @@ class MainHandler(webapp2.RequestHandler):  #make this user input using a form
 
         p = ResultsPage()
         lib = FavoriteCars()   # lib is the instance
+        form = FormPage
+        f = self.request.GET['name']
+        q = self.request.GET['year']
+        r = self.request.GET['manufactor']
 
 
         cd1 = CarData()       # first instance
-        cd1.type = "mustang"
-        cd1.year = 2008
-        cd1.manufactor = "ford"
+        cd1.type = f
+        cd1.year = q
+        cd1.manufactor = r
         lib.add_car(cd1)    #adding to the library
 
         cd2 = CarData()       # second instance
-        cd2.type = "batcar"
-        cd2.year = 2003
-        cd2.manufactor = "batman"
+        cd2.type = f
+        cd2.year = q
+        cd2.manufactor = r
         lib.add_car(cd2)    #adding to the library
 
 
-        lib.calc_time()
-        p.body = lib.compile_cars()
+
+        p.body = lib.compile_cars() + lib.calc_time()
         self.response.write(p.print_out()) #prints the big string
 
 
