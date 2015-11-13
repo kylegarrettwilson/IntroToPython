@@ -8,17 +8,20 @@ class FavoriteCars(object):
         #display a list of cars at the end
         #calculate time span
 
-    def addCar(self, c): #will accept the new car
+    def add_car(self, c): #will accept the new car
         self.__car_list.append(c)  #appending the c into the car list array
         print c.type
 
 
-    def compileCars(self):
+    def compile_cars(self):
         output = ''
         # for loop to cycle through the array
         for car in self.__car_list:
-            output += 'Car: ' + car.type + ' <br />'
+            output += 'Car: ' + car.type + 'Built: ' + str(car.year) + 'Manufacture: ' + car.manufactor + '<br />'
         return output
+
+
+    def 
 
 
 
@@ -41,7 +44,7 @@ class CarData(object):
 
     @property   #getter
     def year(self):  #write only
-        pass
+        return self.__year  #this will put it into the compiler
 
     @year.setter   #setter
     def year(self, y):  #recieving the year
