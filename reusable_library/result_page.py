@@ -22,4 +22,3 @@ class ResultsPage(object):
     def print_out(self):
         all = self.__head + self.body + self.__error + self.__close
         return all
-    
