@@ -1,3 +1,22 @@
+class FavoriteCars(object):
+    def __init__(self):
+        self.__car_list = []
+
+        #to do list:
+        #create an array for info
+        #add to that array
+        #display a list of cars at the end
+        #calculate time span
+
+
+
+
+
+
+
+
+
+
 class CarData(object):
     def __init__(self):
         self.type = ''
