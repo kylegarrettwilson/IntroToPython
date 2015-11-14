@@ -13,7 +13,7 @@ class FormPage(object):
     <body>"""
 
 
-        self.body = """<form name="search" action="/reusable-library/main.py" method="GET">
+        self.body = """<form name="search" action="/reusable-library/main.py" method="post">
             <label>Car Name: </label><input type="text" name="name" /><br>
             <label>Year: </label><input type="text" name="year" /><br>
             <label>Manufacture: </label><input type="text" name="manufactor" /><br>
